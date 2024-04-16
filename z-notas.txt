@@ -1,0 +1,10 @@
+ --------------- OBSERVACIÓN PERSONAL 1:
+
+ El mensaje de error que estás viendo indica que estás utilizando findDOMNode, que es una función de React que está marcada como obsoleta cuando se utiliza dentro de <React.StrictMode>.
+findDOMNode se usa para acceder al DOM (Document Object Model) a partir de un componente de React, pero debido a que manipular directamente el DOM puede causar problemas de rendimiento y comportamiento impredecible, React está desalentando su uso en favor de técnicas más declarativas y orientadas a componentes.
+Para resolver este problema, necesitas encontrar una alternativa a findDOMNode que sea compatible con <React.StrictMode>. En muchos casos, puedes evitar usar findDOMNode refactorizando tu código para trabajar con las referencias a elementos (refs) en lugar de buscar en el DOM directamente.
+Por ejemplo, si estás utilizando findDOMNode para obtener una referencia a un elemento del DOM dentro de un componente de React, puedes reemplazarlo asignando una referencia al elemento directamente utilizando React.createRef() o el hook useRef(), dependiendo de si estás trabajando con una clase o un componente funcional.
+Si aún necesitas manipular directamente el DOM, asegúrate de que estas manipulaciones sean compatibles con <React.StrictMode> y no causen efectos secundarios no deseados. En algunos casos, puede ser necesario desactivar temporalmente <React.StrictMode> mientras trabajas en el código legado o en bibliotecas de terceros que aún no son compatibles. Sin embargo, es recomendable encontrar una solución alternativa compatible con <React.StrictMode> siempre que sea posible para garantizar un comportamiento más predecible y un rendimiento óptimo de tu aplicación.
+
+
+-
