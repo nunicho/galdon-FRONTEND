@@ -7,4 +7,11 @@ Por ejemplo, si estás utilizando findDOMNode para obtener una referencia a un e
 Si aún necesitas manipular directamente el DOM, asegúrate de que estas manipulaciones sean compatibles con <React.StrictMode> y no causen efectos secundarios no deseados. En algunos casos, puede ser necesario desactivar temporalmente <React.StrictMode> mientras trabajas en el código legado o en bibliotecas de terceros que aún no son compatibles. Sin embargo, es recomendable encontrar una solución alternativa compatible con <React.StrictMode> siempre que sea posible para garantizar un comportamiento más predecible y un rendimiento óptimo de tu aplicación.
 
 
--
+ --------------- OBSERVACIÓN PERSONAL 2:
+
+ Muchos index.js en todas las carpetas....puedo averiguar si es buena práctica o no...y en todo caso 
+ reemplazarlo por más imports
+
+
+
+ Ctrl + Shift + P ----> RELOAD WINDOWS
