@@ -6,7 +6,8 @@ import { useAuth } from "../hooks";
 
 export function AdminRouter() {
   const { user } = useAuth();
-
+  //OBSERVACION PERSONAL 4
+  
   const loadLayout = (Layout, Page) => {
     return (
       <Layout>
@@ -18,24 +19,21 @@ export function AdminRouter() {
   return (
     <Routes>
       {!user ? (
-        <Route path="/admin/*" element={<Auth />} />
+        <Route path="/*" element={<Auth />} />
       ) : (
         <>
-          {["/admin", "/admin/blog"].map((path) => (
+          {["", "/blog"].map((path) => (
             <Route
               key={path}
               path={path}
               element={loadLayout(AdminLayout, Blog)}
             />
           ))}
-          <Route path="/admin/users" element={loadLayout(AdminLayout, Users)} />
+          <Route path="/users" element={loadLayout(AdminLayout, Users)} />
+          <Route path="/courses" element={loadLayout(AdminLayout, Courses)} />
+          <Route path="/menu" element={loadLayout(AdminLayout, Menu)} />
           <Route
-            path="/admin/courses"
-            element={loadLayout(AdminLayout, Courses)}
-          />
-          <Route path="/admin/menu" element={loadLayout(AdminLayout, Menu)} />
-          <Route
-            path="/admin/newsletter"
+            path="/newsletter"
             element={loadLayout(AdminLayout, Newsletter)}
           />
         </>

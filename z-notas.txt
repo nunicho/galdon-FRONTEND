@@ -17,6 +17,39 @@ Si aún necesitas manipular directamente el DOM, asegúrate de que estas manipul
 
  El formulario de login no mostraba en pantalla el error de mail/password incorrectos. Yo se lo agregué
 
+ --------------- OBSERVACIÓN PERSONAL 4
+
+ Hice el cambio en App.js: 
+
+ De ser así:
+ 
+export default function app() {
+  return (
+    <AuthProvider>
+      <BrowserRouter>
+        <WebRouter />
+        <AdminRouter />
+      </BrowserRouter>
+    </AuthProvider>
+  );
+}
+
+A así:
 
 
+export default function App() {
+  return (
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>  
+          <Route path="/admin/*" element={<AdminRouter />} />
+          <Route path="*" element={<WebRouter />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
+  );
+}
+
+
+Así eliminé el error de No Matches routes. TAmbién modifiqué el AdminRouter. 
  Ctrl + Shift + P ----> RELOAD WINDOWS
