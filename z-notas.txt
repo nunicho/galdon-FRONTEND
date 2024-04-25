@@ -13,5 +13,10 @@ Si aún necesitas manipular directamente el DOM, asegúrate de que estas manipul
  reemplazarlo por más imports
 
 
+ --------------- OBSERVACIÓN PERSONAL 3
+
+ El formulario de login no mostraba en pantalla el error de mail/password incorrectos. Yo se lo agregué
+
+
 
  Ctrl + Shift + P ----> RELOAD WINDOWS
