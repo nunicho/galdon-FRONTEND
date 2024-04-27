@@ -53,3 +53,20 @@ export default function App() {
 
 Así eliminé el error de No Matches routes. TAmbién modifiqué el AdminRouter. 
  Ctrl + Shift + P ----> RELOAD WINDOWS
+
+
+  --------------- OBSERVACIÓN PERSONAL 
+  
+  --------------- OBSERVACIÓN PERSONAL 
+  
+  --------------- OBSERVACIÓN PERSONAL 
+  
+  --------------- OBSERVACIÓN PERSONAL 
+  
+  --------------- OBSERVACIÓN PERSONAL 
+  
+  --------------- OBSERVACIÓN PERSONAL 
+ 
+  --------------- OBSERVACIÓN PERSONAL 
+ 
+  --------------- OBSERVACIÓN PERSONAL 
