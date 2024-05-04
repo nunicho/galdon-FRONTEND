@@ -55,12 +55,15 @@ Así eliminé el error de No Matches routes. TAmbién modifiqué el AdminRouter.
  Ctrl + Shift + P ----> RELOAD WINDOWS
 
 
-  --------------- OBSERVACIÓN PERSONAL 
+  --------------- OBSERVACIÓN PERSONAL 5
+
+  Poner la petición en setMenus (con s)
   
   --------------- OBSERVACIÓN PERSONAL 
-  
+
   --------------- OBSERVACIÓN PERSONAL 
-  
+
+ 
   --------------- OBSERVACIÓN PERSONAL 
   
   --------------- OBSERVACIÓN PERSONAL 
@@ -70,3 +73,7 @@ Así eliminé el error de No Matches routes. TAmbién modifiqué el AdminRouter.
   --------------- OBSERVACIÓN PERSONAL 
  
   --------------- OBSERVACIÓN PERSONAL 
+
+
+
+  mongodb+srv://contaalonso:XXONOrcfmbKLUFf9@cluster0.l6ot49e.mongodb.net/
