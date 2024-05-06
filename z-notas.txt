@@ -59,7 +59,10 @@ Así eliminé el error de No Matches routes. TAmbién modifiqué el AdminRouter.
 
   Poner la petición en setMenus (con s)
   
-  --------------- OBSERVACIÓN PERSONAL 
+  --------------- OBSERVACIÓN PERSONAL 6
+
+  Ver de agregar más validaciones a las imágenes que se suben (por ejemplo tamaño)...
+
 
   --------------- OBSERVACIÓN PERSONAL 
 
