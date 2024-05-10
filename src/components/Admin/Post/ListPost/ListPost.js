@@ -8,7 +8,7 @@ import "./ListPost.scss";
 const postController = new Post();
 
 export function ListPost(props) {
-  const { reload} = props
+  const { reload, onReload} = props
   const [posts, setPosts] = useState(false);
   const [pagination, setPagination] = useState();
   const [page, setPage] = useState(1)
@@ -43,7 +43,7 @@ export function ListPost(props) {
   return (
     <div className="list-post">
       {map(posts, (post) => (
-        <PostItem key={post._id} post={post} />
+        <PostItem key={post._id} post={post} onReload={onReload} />
       ))}
       <div className="list-post__pagination">
         <Pagination

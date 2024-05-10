@@ -5,6 +5,34 @@ export class Post{
 
     baseApi = ENV.BASE_API;
 
+    async createPost(accessToken, data){
+        try {
+            const formData = new FormData()
+            Object.keys(data).forEach((key)=>{
+                formData.append(key, data[key])
+            })
+             if(data.file){
+                formData.append("miniature", data.file)
+             }
+
+             const url =`${this.baseApi}/${ENV.API_ROUTES.POST}`
+             const params ={
+                method: "POST",
+                headers:{
+                    Authorization: `Bearer ${accessToken}`
+                },
+                body: formData,
+             }
+             const response = await fetch(url, params)
+             const result = await response.json()
+             
+             if(response.status !== 201) throw result
+
+             return result
+        } catch (error) {
+            throw error
+        }
+    }
 
     async getPosts(page=1, limit=10){
         try {
