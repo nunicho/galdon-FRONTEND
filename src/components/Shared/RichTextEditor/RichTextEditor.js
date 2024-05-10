@@ -54,8 +54,6 @@ export class RichTextEditor extends React.Component {
   render() {
     const { editorState } = this.state;
 
-    // If the user changes block type before entering any text, we can
-    // either style the placeholder or hide it. Let's just hide it now.
     let className = "RichEditor-editor";
     var contentState = editorState.getCurrentContent();
     if (!contentState.hasText()) {
@@ -92,13 +90,30 @@ export class RichTextEditor extends React.Component {
   }
 }
 
-// Custom overrides for "code" style.
 const styleMap = {
   CODE: {
     backgroundColor: "rgba(0, 0, 0, 0.05)",
     fontFamily: '"Inconsolata", "Menlo", "Consolas", monospace',
     fontSize: 16,
     padding: 2,
+  },
+  BLACK_TEXT: {
+    color: "black",
+  },
+  RED_TEXT: {
+    color: "red",
+  },
+  BLUE_TEXT: {
+    color: "blue",
+  },
+  GREEN_TEXT: {
+    color: "green",
+  },
+  PURPLE_TEXT: {
+    color: "purple",
+  },
+  YELLOW_TEXT: {
+    color: "yellow",
   },
 };
 
@@ -126,9 +141,68 @@ class StyleButton extends React.Component {
       className += " RichEditor-activeButton";
     }
 
+    let label = this.props.label;
+    let colorIndicator;
+    switch (this.props.style) {
+      case "BLACK_TEXT":
+        colorIndicator = (
+          <span
+            style={{ backgroundColor: "black" }}
+            className="ColorIndicator"
+          ></span>
+        );
+        break;
+      case "RED_TEXT":
+        colorIndicator = (
+          <span
+            style={{ backgroundColor: "red" }}
+            className="ColorIndicator"
+          ></span>
+        );
+        break;
+      case "BLUE_TEXT":
+        colorIndicator = (
+          <span
+            style={{ backgroundColor: "blue" }}
+            className="ColorIndicator"
+          ></span>
+        );
+        break;
+      case "GREEN_TEXT":
+        colorIndicator = (
+          <span
+            style={{ backgroundColor: "green" }}
+            className="ColorIndicator"
+          ></span>
+        );
+        break;
+      case "PURPLE_TEXT":
+        colorIndicator = (
+          <span
+            style={{ backgroundColor: "purple" }}
+            className="ColorIndicator"
+          ></span>
+        );
+        break;
+      case "YELLOW_TEXT":
+        colorIndicator = (
+          <span
+            style={{ backgroundColor: "yellow" }}
+            className="ColorIndicator"
+          ></span>
+        );
+        break;
+      default:
+        colorIndicator = null;
+    }
+
+    if (colorIndicator) {
+      label = colorIndicator;
+    }
+
     return (
       <span className={className} onMouseDown={this.onToggle}>
-        {this.props.label}
+        {label}
       </span>
     );
   }
@@ -175,6 +249,12 @@ var INLINE_STYLES = [
   { label: "Cursiva", style: "ITALIC" },
   { label: "Subrayado", style: "UNDERLINE" },
   { label: "Monoespaciado", style: "CODE" },
+  { label: "Negro", style: "BLACK_TEXT" },
+  { label: "Rojo", style: "RED_TEXT" },
+  { label: "Azul", style: "BLUE_TEXT" },
+  { label: "Verde", style: "GREEN_TEXT" },
+  { label: "Púrpura", style: "PURPLE_TEXT" },
+  { label: "Amarillo", style: "YELLOW_TEXT" },
 ];
 
 const InlineStyleControls = (props) => {
@@ -195,4 +275,4 @@ const InlineStyleControls = (props) => {
   );
 };
 
-
+export default RichTextEditor;
