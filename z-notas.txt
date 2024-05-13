@@ -64,8 +64,8 @@ Así eliminé el error de No Matches routes. TAmbién modifiqué el AdminRouter.
   Ver de agregar más validaciones a las imágenes que se suben (por ejemplo tamaño)...
 
 
-  --------------- OBSERVACIÓN PERSONAL 
-
+  --------------- OBSERVACIÓN PERSONAL  7
+  Ver si es más armónico dejar las importaciones del footer iguales a las demás
  
   --------------- OBSERVACIÓN PERSONAL 
   

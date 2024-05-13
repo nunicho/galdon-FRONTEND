@@ -11,18 +11,18 @@ export function Info() {
       <Icon.LogoWhite className="logo" />
       <p>
         Entra en el mundo del desarrollo web, disfruta creando proyectos de todo
-        tipo, deja que tu imaginación fluya y crea verdaderas maravillas!
+        tipo, deja que tú imaginación fluya y crea verdaderas maravillas!!
       </p>
 
-      {map(socialData, (social)=>(
-            <Button 
-             key={social.type}
-             as="a"
-             target="_blank"
-             href={social.link}
-             color={social.type}
-             icon={social.type}
-            /> 
+      {map(socialData, (social) => (
+        <Button
+          key={social.type}
+          as="a"
+          target="_blank"
+          href={social.link}
+          color={social.type}
+          icon={social.type}
+        />
       ))}
     </div>
   );
