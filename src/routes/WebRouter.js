@@ -4,6 +4,8 @@ import {ClientLayout} from "../layouts"
 import {Home, Blog, Contact, Courses, Post} from "../pages/web"
 
 
+export function WebRouter() {
+  
   const loadLayout = (Layout, Page) => {
     return (
       <Layout>
@@ -12,8 +14,6 @@ import {Home, Blog, Contact, Courses, Post} from "../pages/web"
     );
   };
 
-
-export function WebRouter() {
   return (
     <Routes>
       <Route exact path="/" element={loadLayout(ClientLayout, Home)} />

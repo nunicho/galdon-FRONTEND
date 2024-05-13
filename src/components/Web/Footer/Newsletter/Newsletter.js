@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 import { useFormik } from "formik";
-import {Newsletter as NewsletterController} from '../../../../api/newsletter'
+import { Newsletter as NewsletterController } from "../../../../api/newsletter";
 import { initialValues, validationSchema } from "./Newsletter.form";
 import "./Newsletter.scss";
 
-const  newsletterController = new NewsletterController() // se usa un alias para  que no haya conflictos con el nombre del presente componente
+const newsletterController = new NewsletterController(); // se usa un alias para  que no haya conflictos con el nombre del presente componente
 
 export function Newsletter() {
   const [success, setSuccess] = useState(false);
@@ -15,11 +15,11 @@ export function Newsletter() {
     validationSchema: validationSchema(),
     validateOnChange: false,
     onSubmit: async (formValue) => {
-        setSuccess(false)
+      setSuccess(false);
       try {
-        await newsletterController.registerEmail(formValue.email)
-        formik.resetForm()
-        setSuccess(true)
+        await newsletterController.registerEmail(formValue.email);
+        formik.resetForm();
+        setSuccess(true);
       } catch (error) {
         console.error(error);
       }
@@ -29,6 +29,7 @@ export function Newsletter() {
   return (
     <div className="footer-newsletter">
       <h4>¡Anótate y aprende!</h4>
+
       <Form onSubmit={formik.handleSubmit}>
         <Form.Input
           name="email"
@@ -40,7 +41,10 @@ export function Newsletter() {
         <Form.Button type="submit" primary fluid loading={formik.isSubmitting}>
           ¡Me suscribo!
         </Form.Button>
-        {success && <p className="success">¡Email Registrado correctamente!</p>}
+
+        {success && (
+          <p className="success">¡Email registrado correctamente!</p>
+        )}
       </Form>
     </div>
   );

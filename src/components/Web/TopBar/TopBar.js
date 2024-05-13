@@ -39,16 +39,16 @@ export function TopBar() {
             ))}
           </div>
         </div>
-        
+
         <div>
           {map(socialData, (social) => (
-            <Button 
-                key={social.type}
-                as="a"
-                target="_blank"
-                href={social.link}
-                color={social.type}
-                icon={social.type}
+            <Button
+              key={social.type}
+              as="a"
+              target="_blank"
+              href={social.link}
+              color={social.type}
+              icon={social.type}
             />
           ))}
         </div>
