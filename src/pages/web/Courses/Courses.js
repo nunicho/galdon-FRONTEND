@@ -5,7 +5,7 @@ import { Course as CourseController } from "../../../api";
 import { image } from "../../../assets";
 import { Course } from "../../../components/Web/Courses";
 import "./Courses.scss";
-
+// OBSERVACIÓN PERSONAL 8
 const courseController = new CourseController();
 
 export function Courses() {

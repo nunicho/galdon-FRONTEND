@@ -67,8 +67,8 @@ Así eliminé el error de No Matches routes. TAmbién modifiqué el AdminRouter.
   --------------- OBSERVACIÓN PERSONAL  7
   Ver si es más armónico dejar las importaciones del footer iguales a las demás
  
-  --------------- OBSERVACIÓN PERSONAL 
-  
+  --------------- OBSERVACIÓN PERSONAL 8
+  Ver de incorporar el Loader
   --------------- OBSERVACIÓN PERSONAL 
   
   --------------- OBSERVACIÓN PERSONAL 

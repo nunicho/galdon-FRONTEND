@@ -68,33 +68,50 @@ export class Post {
         body: formData,
       };
 
-      const response = await fetch(url, params)
-      const result = await response.json()
-      if (response.status !== 200 ) throw result
-      return result
+      const response = await fetch(url, params);
+      const result = await response.json();
+      if (response.status !== 200) throw result;
+      return result;
     } catch (error) {
       throw error;
     }
   }
 
-  async  deletePost(accessToken, idPost){
+  async deletePost(accessToken, idPost) {
     try {
-        const url = `${this.baseApi}/${ENV.API_ROUTES.POST}/${idPost}`
-        const params = {
-            method: "DELETE",
-            headers: {
-                Authorization: `Bearer ${accessToken}`
-            }
-        }
+      const url = `${this.baseApi}/${ENV.API_ROUTES.POST}/${idPost}`;
+      const params = {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      };
 
-        const response = await fetch(url, params)
-        const result = await response.json();
-        
-        if(response.status !== 200) throw result;
+      const response = await fetch(url, params);
+      const result = await response.json();
 
-        return result
+      if (response.status !== 200) throw result;
+
+      return result;
     } catch (error) {
-        throw error;
+      throw error;
+    }
+  }
+
+  async getPost(path) {
+    try {
+      const url = `${this.baseApi}/${ENV.API_ROUTES.POST}/${path}`;
+
+      const response = await fetch(url);
+      const result = await response.json();
+
+      console.log("Datos de la publicación:", result); // Agrega este console.log
+
+      if (response.status !== 200) throw result;
+
+      return result;
+    } catch (error) {
+      throw error;
     }
   }
 }
