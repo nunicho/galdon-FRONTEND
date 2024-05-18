@@ -1,17 +1,17 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { WebRouter, AdminRouter } from "./routes";
 import { AuthProvider } from "./contexts";
 //OBSERVACION PERSONAL 4 
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>  
           <Route path="/admin/*" element={<AdminRouter />} />
           <Route path="*" element={<WebRouter />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   );
 }
