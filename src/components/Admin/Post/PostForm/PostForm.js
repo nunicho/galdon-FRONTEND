@@ -8,7 +8,6 @@ import { useAuth } from "../../../../hooks";
 import {ENV} from "../../../../utils"
 import { initialValues, validationSchema } from "./PostForm.form";
 import "./PostForm.scss";
-import { initial } from "lodash";
 
 const postController = new Post();
 
